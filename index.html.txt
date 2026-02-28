@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi's Fukuoka Trip 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FUKUOKA 2026</div>
+        <div class="nav-buttons">
+            <button onclick="showSection('flight')">航班資訊</button>
+            <button onclick="showSection('itinerary')">行程資訊</button>
+            <button onclick="showSection('pre-check')">行前確認</button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        
+        <section id="flight" class="content-section active">
+            <h2>✈️ 航班資訊</h2>
+            <div class="card">
+                <h3>星宇航空 STARLUX</h3>
+                <div class="flight-detail">
+                    <p><strong>去程：TPE > FUK</strong></p>
+                    <p>09:35 - 13:05 | 桃園機場 1 航廈</p>
+                </div>
+                <hr>
+                <div class="flight-detail">
+                    <p><strong>回程：FUK > TPE</strong></p>
+                    <p>14:15 - 15:45 | 桃園機場 1 航廈</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="itinerary" class="content-section">
+            <h2>🗺️ 五天四夜行程概覽</h2>
+            <div class="timeline">
+                <div class="day-card">
+                    <span class="day-tag">4/28 (二)</span>
+                    <p>抵達 → 🏨 Rei Check-in → 川端商店街 → 櫛田神社 → MaxValu 超市 (24H)</p>
+                    <small>💡 建議搭計程車 (1500~2000 JPY)，舒服開局！</small>
+                </div>
+                <div class="day-card">
+                    <span class="day-tag">4/29 (三)</span>
+                    <p>廣島宮島一日遊 🚄</p>
+                    <small>💡 避開黃金週人潮，今天體力最好最適合去。</small>
+                </div>
+                <div class="day-card">
+                    <span class="day-tag">4/30 (四)</span>
+                    <p>福岡輕鬆日 (三選一)</p>
+                    <ul>
+                        <li>A. 天神地下街 / PARCO</li>
+                        <li>B. 太宰府半日遊</li>
+                        <li>C. 柳川遊船放鬆</li>
+                    </ul>
+                </div>
+                <div class="day-card">
+                    <span class="day-tag">5/01 (五)</span>
+                    <p>大購物日 🛍️</p>
+                    <p>LaLaport 鋼彈 / Marinoa City Outlet / 天神免稅店</p>
+                </div>
+                <div class="day-card">
+                    <span class="day-tag">5/02 (六)</span>
+                    <p>最後採買 → 回國 🛫</p>
+                    <p>11:30 博多出發機場，14:00 起飛。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pre-check" class="content-section">
+            <h2>📋 行前清單確認</h2>
+            <div class="check-grid">
+                <div class="check-column" id="taiwan-buy">
+                    <h3>台灣須購買品項</h3>
+                    <ul contenteditable="true">
+                        <li><input type="checkbox"> eSIM 卡</li>
+                        <li><input type="checkbox"> 機場接送預約</li>
+                        <li><input type="checkbox"> 行李重量確認</li>
+                        <li><input type="checkbox"> 旅遊保險</li>
+                        <li><input type="checkbox"> 常備藥物</li>
+                        <li><input type="checkbox"> 護照正本</li>
+                        <li><input type="checkbox"> 日幣現鈔</li>
+                        <li><input type="checkbox"> 飯店確認信</li>
+                    </ul>
+                </div>
+
+                <div class="check-column" id="carry-on">
+                    <h3>攜帶物品</h3>
+                    <ul contenteditable="true">
+                        <li><input type="checkbox"> 牙膏牙刷</li>
+                        <li><input type="checkbox"> 眼鏡/隱形眼鏡/眼藥水</li>
+                        <li><input type="checkbox"> 消炎/止痛藥物</li>
+                        <li><input type="checkbox"> 內衣褲/襪子(夾鏈袋)</li>
+                        <li><input type="checkbox"> 充電器/行動電源</li>
+                        <li><input type="checkbox"> 衣物壓縮袋</li>
+                    </ul>
+                </div>
+
+                <div class="check-column" id="shopping-list">
+                    <h3>確認購物清單</h3>
+                    <ul contenteditable="true">
+                        <li>在此輸入想買的東西...</li>
+                    </ul>
+                    <small>*(此區域可直接點擊編輯內容)</small>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

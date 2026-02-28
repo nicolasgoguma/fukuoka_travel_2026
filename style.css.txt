@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #35495e;
+    --accent-color: #42b983;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 導覽列 */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-buttons button {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* 內容容器 */
+.content-container {
+    padding: 2rem 5%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content-section {
+    display: none; /* 預設隱藏 */
+    animation: fadeIn 0.5s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 卡片與排版 */
+.card, .day-card, .check-column {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.day-tag {
+    background: var(--accent-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* 行前確認 三欄佈局 */
+.check-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.check-column h3 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* 手機版優化 */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-buttons button {
+        margin-left: 0;
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
